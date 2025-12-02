@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinematic Glass Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="webgl"></canvas>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Cinematic Optics</p>
+      <h1>Glass-like distortions for your static page.</h1>
+      <p class="lede">
+        Scroll the page and watch the subtle chromatic aberration, glow, and coma ripple across
+        the content as if viewed through imperfect cinema glass.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="#story">See the effect</a>
+        <a class="link" href="https://threejs.org/" target="_blank" rel="noreferrer">Built with three.js</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="story" class="panel">
+      <h2>Intentional Imperfections</h2>
+      <p>
+        Cinematic lenses often introduce artifacts like coma, halation, and subtle bloom.
+        Here, those aesthetics are recreated in real-time shaders while leaving the HTML untouched and fully scrollable.
+      </p>
+    </section>
+
+    <section class="panel grid">
+      <div class="card">
+        <h3>Chromatic Aberration</h3>
+        <p>Per-channel offsets on the edges of the viewport mimic the way light splits through glass.</p>
+      </div>
+      <div class="card">
+        <h3>Halation & Bloom</h3>
+        <p>Bright highlights bleed softly, producing the dreamy glow of vintage cinema lenses.</p>
+      </div>
+      <div class="card">
+        <h3>Coma Distortion</h3>
+        <p>Off-axis rays stretch and swirl, giving motion and depth even when the page is still.</p>
+      </div>
+      <div class="card">
+        <h3>Smooth Scrolling</h3>
+        <p>Lenis keeps the scroll buttery so the shader can dance fluidly with your movement.</p>
+      </div>
+    </section>
+
+    <section class="panel alt">
+      <h2>How it works</h2>
+      <p>
+        The DOM renders normally, then is sampled into a WebGL texture for post-processing. A full-screen quad applies
+        fragment shaders that layer aberration, bloom, and noise without interfering with your layout or interactions.
+      </p>
+    </section>
+  </main>
+
+  <footer class="panel footer">
+    <p>Built for experimenting with three.js post-processing on everyday content.</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
