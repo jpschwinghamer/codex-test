@@ -1,4 +1,4 @@
-import Lenis from './lenis-lite.js';
+import Lenis from 'https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.mjs';
 import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
 import html2canvas from 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/+esm';
 
